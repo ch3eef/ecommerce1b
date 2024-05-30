@@ -24,7 +24,9 @@ app.use(cors());
 
 // Allow specific origin(s)
 app.use(cors({
-    origin: 'https://ecommerce1b-frontend.vercel.app'
+    origin: ['https://ecommerce1b-frontend.vercel.app'],
+    methods: ['POST', 'GET'],
+    credentials: true
   }));
 
 app.use(express.json());
